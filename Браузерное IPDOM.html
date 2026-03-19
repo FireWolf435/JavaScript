@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM</title>
+</head>
+<body>
+
+<h1 id="title">Привет!</h1>
+
+<p>Первый</p>
+<p>Второй</p>
+<p>Третий</p>
+
+<a id="link">Перейти</a>
+
+<img id="img" src="https://via.placeholder.com/150">
+
+<script>
+
+    // Изменение текста
+    // Находим заголовок по id и меняем текст
+    document.getElementById("title").innerHTML = "Добро пожаловать!";
+
+    // Подсчёт элементов
+    // Получаем все теги <p> и выводим их количество
+    var p = document.getElementsByTagName("p");
+    alert(p.length);
+
+    // 3. Изменение атрибутов
+    // Добавляем для ссылки адрес и добавляем открытие в новой вкладке браузера
+    var link = document.getElementById("link");
+    link.href = "https://google.com";
+    link.target = "_blank";
+
+    // Стилизация
+    // изменяем цвет и размер текста у первого абзаца
+    p[0].style.color = "red";
+    p[0].style.fontSize = "20px";
+
+    // Изменение картинки
+    // Меняем картинку на другую
+    var img = document.getElementById("img");
+    img.src = "https://via.placeholder.com/300";
+
+</script>
+
+</body>
+</html>
